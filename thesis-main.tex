@@ -1,13 +1,7 @@
-%%%%
-% Consiglio la visione dei seguenti tutorial:
-% - https://www.youtube.com/watch?v=ihxSUsJB_14
-% - https://www.youtube.com/watch?v=XTFWaV55uDo
-%%%%
 \documentclass[12pt,a4paper,openright,twoside]{book}
 \usepackage[utf8]{inputenc}
 
-%\newcommand{\thesislang}{italian} % decommentare in caso di tesi in italiano
-\newcommand{\thesislang}{english} % commentare in caso di tesi in italiano
+\newcommand{\thesislang}{italian}
 \usepackage{thesis-style}
 % version
 \newcommand{\versionmajor}{0}
@@ -17,25 +11,13 @@
 \typeout{Document version: \version}
 
 \begin{document}
-	
+
 \frontmatter
 
 \input{front.tex}
 
-\begin{abstract}	
-Max 2000 characters, strict.
-\end{abstract}
-
-\begin{dedication} % this is optional
-Optional. Max a few lines.
-\end{dedication}
-
-\begin{acknowledgements} % this is optional
-Optional. Max 1 page.
-\end{acknowledgements}
-
 %----------------------------------------------------------------------------------------
-\tableofcontents   
+\tableofcontents
 \listoffigures     % (optional) comment if empty
 \lstlistoflistings % (optional) comment if empty
 %----------------------------------------------------------------------------------------
@@ -47,33 +29,32 @@ Optional. Max 1 page.
 \label{chap:introduction}
 %----------------------------------------------------------------------------------------
 
-Write introduction here.
-
-%
-\paragraph{Thesis Structure.} % Optional paragraph title
-%
-
-(This is optional an optional paragraph.)
-%
-Accordingly, the reminder of this thesis is structures as follows.
-%
-\Cref{chap:background} discusses (briefly describe the content of \cref{chap:background}).
-%
-Describe other chapters here in a similar way.
-%
-Finally, \Cref{chap:conclusions} concludes this thesis by summarising its main contribution.
+ChEBI (Chemical Entities of Biological Interest) è un'ontologia completa di entità chimiche, con particolare attenzione a quelle di rilevanza biologica. ChEBI è progettato per essere utilizzato nell'annotazione e nell'indicizzazione di composti chimici in database e letteratura, nonché nell'analisi di dati chimici.
+L'ontologia ChEBI fornisce una classificazione gerarchica delle entità chimiche, basata sulle loro proprietà strutturali e funzionali, nonché sui loro ruoli e applicazioni biologiche. L'ontologia comprende varie classi di composti, come aminoacidi, nucleotidi, lipidi, carboidrati, steroidi e prodotti naturali, nonché composti sintetici e farmaci.
+ChEBI contiene informazioni estese sulle proprietà e le attività delle entità chimiche, tra cui le loro strutture chimiche, i pesi molecolari, i punti di fusione, i punti di ebollizione, le solubilità e gli effetti farmacologici.
 
 %----------------------------------------------------------------------------------------
-\chapter{State of the Art} % or Background
-\label{chap:background}
+\chapter{Panoramica di ChEBI} % or Background
+\label{chap:panoramica}
 %----------------------------------------------------------------------------------------
+TODO: Descrizione generale del core di ChEBI con annessi diagrammi
+\section{Compound}
 
-Write background here.
+\section{Database Accession}
 
-This section is likely to contain a lot of citations.
-%
-For instance in \cite{AnzengruberSocInfo2013} the authors propose a novel means for tackling with the problem of preventing bad things from happening.
+\section{Compound Name}
 
+\section{Chemical Data}
+
+\section{Comment}
+
+\section{Reference}
+
+\section{Structure}
+
+\section{Relation}
+
+\section{Compound Origins}
 %----------------------------------------------------------------------------------------
 \chapter{Design} % possible chapter for Projects
 \label{chap:design}
