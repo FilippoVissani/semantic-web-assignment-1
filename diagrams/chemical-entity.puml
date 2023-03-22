@@ -1,9 +1,9 @@
 @startuml
-class ChemicalEntity
-class Atom
-class ChemicalSubstance
-class Group
-class MolecularEntity
+class "Chemical Entity" as ChemicalEntity
+class "Atom" as Atom
+class "Chemical Substance" as ChemicalSubstance
+class "Group" as Group
+class "Molecular Entity" as MolecularEntity
 
 Atom -up-> ChemicalEntity : is a
 ChemicalSubstance -up-> ChemicalEntity : is a
