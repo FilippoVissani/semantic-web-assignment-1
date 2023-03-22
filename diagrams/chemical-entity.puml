@@ -1,0 +1,12 @@
+@startuml
+class ChemicalEntity
+class Atom
+class ChemicalSubstance
+class Group
+class MolecularEntity
+
+Atom -up-> ChemicalEntity : is a
+ChemicalSubstance -up-> ChemicalEntity : is a
+Group -up-> ChemicalEntity : is a
+MolecularEntity -up-> ChemicalEntity : is a
+@enduml
