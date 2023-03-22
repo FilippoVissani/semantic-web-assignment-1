@@ -1,0 +1,14 @@
+@startuml subatomic-particle
+class "SubatomicParticle" as SP
+class "Boson" as B
+class "Composite Particle" as CP
+class "Fermion" as F
+class "Fundamental Particle" as FP
+class "Nuclear Particle" as NP
+
+B -up-> SP : "is a"
+CP -up-> SP : "is a"
+F -up-> SP : "is a"
+FP -up-> SP : "is a"
+NP -> SP : "is a"
+@enduml
