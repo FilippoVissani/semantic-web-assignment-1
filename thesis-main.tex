@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper,openright,twoside]{book}
 \usepackage[utf8]{inputenc}
+\usepackage{float}
 
 \newcommand{\thesislang}{italian}
 \usepackage{thesis-style}
@@ -37,33 +38,85 @@ ChEBI contiene informazioni estese sulle proprietà e le attività delle entità
 %----------------------------------------------------------------------------------------
 La struttura di ChEBI è quella di un grafico direzionato aciclico (DAG),
 differenziandosi da una semplice tassonomia nel fatto che un nodo figlio può avere più padri.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{figures/caffeine.png}
+	\caption{Struttura DAG di ChEBI}
+	\label{fig:Caffeine}
+\end{figure}
+
 L'ontologia è a sua volta suddivisa in tre sotto-ontologie principali, chiamate Chemical Entity, Role e Subatomic Particle.
 
 \section{Chemical Entity}
 
-\begin{figure}
+Una \textit{Chemical Entity} è definita come qualsiasi entità molecolare, sia essa sintetica o di origine naturale, che ha una struttura chimica ben definita ed è in grado di interagire con i sistemi biologici.
+
+In ChEBI, i le entità chimiche sono suddivise in quattro sotto-categorie principali:
+\begin{itemize}
+	\item \textit{Group}: è un insieme di entità chimiche che hanno una struttura chimica comune.
+	\item \textit{Molecular Entity}: è un insieme di atomi che sono legati tra loro da legami chimici.
+	\item \textit{Atom}: è l'unità minima di materia che non può essere ulteriormente divisa senza perdita di identità.
+	\item \textit{Chemical Substance}: è una sostanza chimica che ha una composizione chimica ben definita.
+\end{itemize}
+
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{figures/chemical-entity.png}
-	\caption{}
+	\caption{Gerarchia più esterna di chemical entity}
 	\label{fig:ChemicalEntity}
 \end{figure}
-
-\subsection{Atom}
-\subsection{Chemical Substance}
-\subsection{Group}
-\subsection{Molecular Entity}
-
 \section{Role}
-\subsection{Application}
-\subsection{Biological Role}
-\subsection{Chemical Role}
+Un \textit{Role} è una funzione o un compito che una entità chimica può svolgere. Un ruolo può essere svolto da una singola entità chimica o da un gruppo di entità chimiche. In ChEBI, i ruoli sono suddivisi in tre sotto-categorie principali:
+\begin{itemize}
+	\item \textit{Biological Role}: è un ruolo che una entità chimica può svolgere in un organismo vivente.
+	\item \textit{Chemical Role}: è un ruolo che una entità chimica può svolgere in un composto chimico.
+	\item \textit{Application}: è un ruolo che una entità chimica può svolgere in un processo industriale o in un'attività umana.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{figures/role.png}
+	\caption{Gerarchia più esterna di role}
+	\label{fig:Role}
+\end{figure}
 
 \section{Subatomic Particle}
-\subsection{Boson}
-\subsection{Composite Particle}
-\subsection{Fermion}
-\subsection{Fundamental Particle}
-\subsection{Nuclear Particle}
+Una \textit{Subatomic Particle} è una particella più piccola di un atomo.
+In ChEBI, le particelle subatomiche sono suddivise nelle seguenti sotto-categorie principali:
+\begin{itemize}
+	\item \textit{Boson}: è una particella subatomica responsabile delle interazioni fondamentali e del fenomeno della massa.
+	\item \textit{Composite Particle}: è una particella subatomica che è costituita da più di un quark.
+	\item \textit{Fermion}: è una particella subatomica che ha una massa non nulla e che interagisce solo con altre particelle subatomiche.
+	\item \textit{Fundamental Particle}: è una particella subatomica che non può essere ulteriormente divisa senza perdita di identità.
+	\item \textit{Nuclear Particle}: è una particella subatomica che costituisce il nucle di un atomo.
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{figures/subatomic-particle.png}
+	\caption{Gerarchia più esterna di subatomic particle}
+	\label{fig:SubatomicParticle}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+\chapter{Esempi di Classi}
+\label{chap:classexamples}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{figures/class.png}
+	\caption{Esempio di classe}
+	\label{fig:Class}
+\end{figure}
+
+\lstinputlisting[
+	float,
+	language=XML,
+	caption={OWL class for caffeine},
+	label={lst:caffeine},
+]{listings/caffeine.xml}
 
 %----------------------------------------------------------------------------------------
 \chapter{Mapping} % possible chapter for Projects
