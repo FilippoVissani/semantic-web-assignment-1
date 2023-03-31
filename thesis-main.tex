@@ -28,15 +28,20 @@
 \label{chap:introduction}
 %----------------------------------------------------------------------------------------
 
-ChEBI (Chemical Entities of Biological Interest) è un'ontologia completa di entità chimiche, con particolare attenzione a quelle di rilevanza biologica. ChEBI è progettato per essere utilizzato nell'annotazione e nell'indicizzazione di composti chimici in database e letteratura, nonché nell'analisi di dati chimici.
+ChEBI (Chemical Entities of Biological Interest) è un'ontologia completa di entità chimiche, con particolare attenzione ai composti chimici "piccoli". Tali entità molecolari, che possono essere
+sia naturali che sintetiche, intervengono nei processi biologici degli organismi viventi. ChEBI è progettato per essere utilizzato nell'annotazione e nell'indicizzazione di composti chimici in database e letteratura, nonché nell'analisi di dati chimici.
 L'ontologia ChEBI fornisce una classificazione gerarchica delle entità chimiche, basata sulle loro proprietà strutturali e funzionali, nonché sui loro ruoli e applicazioni biologiche. L'ontologia comprende varie classi di composti, come aminoacidi, nucleotidi, lipidi, carboidrati, steroidi e prodotti naturali, nonché composti sintetici e farmaci.
 ChEBI contiene informazioni estese sulle proprietà e le attività delle entità chimiche, tra cui le loro strutture chimiche, i pesi molecolari, i punti di fusione, i punti di ebollizione, le solubilità e gli effetti farmacologici.
+Le entità presenti in ChEBI sono legate tra loro tramite il concetto di relazione, che definisce la tipologia di legame che c'è tra esse.
+ChEBI è disponibile online e può essere consultato tramite il sito web http://www.ebi.ac.uk/chebi/.
 
 %----------------------------------------------------------------------------------------
 \chapter{Panoramica di ChEBI}
 \label{chap:panoramica}
 %----------------------------------------------------------------------------------------
-L'ontologia ChEBI è una classificazione strutturata delle entità contenute all'interno di ChEBI. Originariamente sviluppata come "Chemical Ontology" da Michael Ashburner e Pankaj Jaiswal, la versione alpha iniziale è stata incorporata in ChEBI. La sua struttura è essenzialmente quella di un grafo aciclico direzionato (DAG), che differisce da una semplice tassonomia in quanto un termine figlio può avere molti termini padre. La struttura DAG di ChEBI è mostrata nella Figura \ref{fig:Caffeine}.
+L'ontologia ChEBI è una classificazione strutturata delle entità chimiche sopra descritte. La sua struttura è essenzialmente quella di un grafo aciclico direzionato (DAG), in cui le entità chimiche sono i nodi e le relazioni sono gli archi.
+Questa struttura differisce da una semplice tassonomia in quanto un nodo figlio può avere molti nodi padre.
+La struttura DAG di ChEBI è mostrata nella Figura \ref{fig:Caffeine}.
 
 \begin{figure}[H]
 	\centering
@@ -103,7 +108,7 @@ In ChEBI, le particelle subatomiche sono suddivise nelle seguenti sotto-categori
 \chapter{Esempi di Risorse}
 \label{chap:classexamples}
 
-In ChEBI le risorse possono avere vari attributi, tra i quali:
+In ChEBI le risorse, cioè i componenti che costituiscono i nodi del grafo, possono avere vari attributi, tra i quali:
 \begin{itemize}
 	\item \textit{Definition}: descrizione della risorsa.
 	\item \textit{ID}: Identificatore univoco della risorsa.
@@ -172,15 +177,28 @@ Le informazioni contenute in DrugBank includono la struttura chimica delle drogh
 
 Il progetto DrugBank ha l'obiettivo di fornire informazioni accurate e aggiornate sui farmaci per aiutare i professionisti sanitari, i ricercatori e il pubblico in generale a comprendere meglio l'efficacia e la sicurezza delle droghe.
 
+\paragraph{} In ChEBI, le droghe possono essere modellate attraverso le loro entità costituenti e le relazioni 'is a', 'has role', 'has part' ed 'is enantiomer of';
+dunque ad una particolare entry di DrugBank corrisponde una porzione di grafo di ChEBI.
+
+È possibile accedere al database, disponibile in formato XML ed RDF, su \url{https://go.drugbank.com/}.
+
 \section{Neuroscience Information Framework}
 Il Neuroscience Information Framework è un repository di risorse web globali di neuroscienze, inclusi database di neuroscienze sperimentali, clinici e traslazionali, basi di conoscenza, atlanti e risorse genetiche/genomiche e fornisce molti collegamenti autorevoli in tutto il portale di neuroscienze di Wikipedia.
+A differenza dei motori di ricerca generici, NIF fornisce un accesso molto più profondo a un insieme mirato di risorse rilevanti per le neuroscienze, strategie di ricerca su misura per le neuroscienze e accesso a contenuti che sono tradizionalmente "nascosti" dai motori di ricerca web.
+Il NIF è un inventario dinamico di database di neuroscienze, annotato e integrato con un sistema unificato di terminologia biomedica (es. NeuroLex).
+NIF supporta query basate su concetti su più scale di struttura biologica e più livelli di funzione biologica, semplificando la ricerca e la comprensione dei risultati.
+Uno degli obiettivi futuri di NIF sarà fornire anche un registro attraverso il quale i fornitori di risorse possono rivelare la disponibilità di risorse rilevanti per la ricerca neuroscientifica. NIF non intende essere un magazzino o un deposito in sé, ma un mezzo per divulgare e localizzare risorse altrove disponibili tramite il web.
 
-A differenza dei motori di ricerca generici, NIF fornisce un accesso molto più profondo a un insieme mirato di risorse rilevanti per le neuroscienze, strategie di ricerca su misura per le neuroscienze e accesso a contenuti che sono tradizionalmente "nascosti" dai motori di ricerca web. Il NIF è un inventario dinamico di database di neuroscienze, annotato e integrato con un sistema unificato di terminologia biomedica (es. NeuroLex). NIF supporta query basate su concetti su più scale di struttura biologica e più livelli di funzione biologica, semplificando la ricerca e la comprensione dei risultati. Uno degli obiettivi futuri di NIF sarà fornire anche un registro attraverso il quale i fornitori di risorse possono rivelare la disponibilità di risorse rilevanti per la ricerca neuroscientifica. NIF non intende essere un magazzino o un deposito in sé, ma un mezzo per divulgare e localizzare risorse altrove disponibili tramite il web.
+\paragraph{} In questo progetto, ChEBI viene utilizzato per modellare le entità chimiche che sono oggetto di studio, come ad esempio i composti chimici che sono stati utilizzati per studiare il comportamento di un particolare neurone.
+Quando gli scienziati inseriscono dati nel NIF, utilizzano ChEBI per classificare le sostanze chimiche coinvolte in quei dati.
+Ad esempio, se un ricercatore inserisce dati sulle interazioni proteina-sostanza chimica, utilizza ChEBI per descrivere la sostanza chimica coinvolta.
+ChEBI è utilizzato per standardizzare la descrizione delle sostanze chimiche in modo che gli scienziati possano facilmente trovare informazioni su di esse e confrontarle tra loro.
+
 %----------------------------------------------------------------------------------------
 \chapter{Conclusioni}
 \label{chap:conclusions}
 %----------------------------------------------------------------------------------------
-In questa ricerca abbiamo introdotto ChEBI, un'ontologia che si prefissa di modellare le entità chimiche di interesse biologico. Abbiamo proceduto a fare una panoramica della sua struttura, composta da tre sotto-ontologie, ognuna con il proprio specifico obiettivo. Siamo passati a definire le possibili relazioni tra i concetti presenti in ChEBI, grazie alle quali è possibile modellare risorse in maniera completa ed efficace (come si è potuto apprezzare nel listato \ref{lst:caffeine}). 
+In questa ricerca abbiamo introdotto ChEBI, un'ontologia che si prefissa di modellare le entità chimiche di interesse biologico. Abbiamo proceduto a fare una panoramica della sua struttura, composta da tre sotto-ontologie, ognuna con il proprio specifico obiettivo. Siamo passati a definire le possibili relazioni tra i concetti presenti in ChEBI, grazie alle quali è possibile modellare risorse in maniera completa ed efficace (come si è potuto apprezzare nel listato \ref{lst:caffeine}).
 
 Dato il dominio nel quale si colloca, ChEBI è particolarmente adatta a progetti in contesti affini alla biologia come healthcare e, soprattutto, la farmacologia.
 
